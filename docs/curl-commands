@@ -1,0 +1,15 @@
+
+#Hello page
+curl -i -H "Content-Type: application/json" GET localhost:8080/hello
+
+#Add a pledge
+curl -i -H "Content-Type: application/json" -X POST -d '{
+        "name": "God Geo",
+        "statement": "I vote to destroy the world!"
+    }' localhost:8080/pledges
+
+#List all pledges
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/pledges
+
+#Get one pledge
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/pledges/2
